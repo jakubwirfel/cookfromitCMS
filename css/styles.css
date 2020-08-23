@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 body {
   margin: 0 !important;
   overflow-x: hidden;
   height: 100%;
+  background: #F1F3F9 !important;
 }
 
 .alert-box {
@@ -18,10 +20,10 @@ body {
   z-index: 900;
 }
 .alert-box .error {
-  background: #d9543f;
+  background: #585A56;
 }
 .alert-box .success {
-  background: #DDA288;
+  background: #81A3A7;
 }
 .alert-box .alert {
   width: auto;
@@ -37,7 +39,7 @@ body {
   font-family: "Manjari", sans-serif;
   font-size: 100;
   font-size: 1.1em;
-  color: #F5F1F1;
+  color: #272424;
   padding: 0 50px;
 }
 
@@ -125,6 +127,84 @@ li {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.login-container .form-container {
+  height: auto;
+  width: 25%;
+  background: #81A3A7;
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login-container .form-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #585A56;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: -1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.login-container .form-container h1 {
+  color: #272424;
+  text-align: center;
+  font-size: 1.6em;
+  width: 100%;
+  padding-bottom: 50px;
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+}
+.login-container .form-container .input-login {
+  display: block;
+  color: #F1F3F9;
+  margin: 5px 0px 20px 0px;
+  width: 100%;
+  line-height: 30px;
+  font-size: 15px;
+  border: none;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #F1F3F9;
+  text-align: center;
+  align-self: center;
+}
+.login-container .form-container .label-login {
+  font-size: 1.3em;
+  font-family: "Manjari", sans-serif;
+  align-self: center;
+}
+.login-container .form-container .field-wrap-login {
+  align-self: center;
+  width: 60%;
+}
+.login-container .form-container .button-login {
+  margin-top: 25px !important;
+  align-self: center;
+  padding: 10px;
+  width: 100px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 3px solid #F1F3F9;
+  cursor: pointer;
+  color: #272424;
+  font-family: "Manjari", sans-serif;
+  transition: 0.2s;
+}
+.login-container .form-container .button-login:hover {
+  background-color: #F1F3F9;
 }
 
 /*# sourceMappingURL=styles.css.map */
