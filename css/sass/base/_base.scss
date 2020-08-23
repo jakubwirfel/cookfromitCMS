@@ -1,7 +1,14 @@
+$baseCL: #F1F3F9;
+$secCL: #585A56;
+$thiCL: #81A3A7;
+$forCL: #C2D3DA;
+$fontCL: #272424;
+
 body {
     margin: 0 !important;
     overflow-x: hidden;
     height: 100%;
+    background: $baseCL !important;
 }
 .alert-box {
     position: fixed;
@@ -13,10 +20,10 @@ body {
     align-items: center;
     z-index: 900;
     .error {
-        background: #d9543f;
+        background: $secCL;
     }
     .success {
-        background: #DDA288;
+        background: $thiCL;
     }
     .alert {
         width: auto;
@@ -31,7 +38,7 @@ body {
             font-family: 'Manjari', sans-serif;
             font-size: 100;
             font-size: 1.1em;
-            color: #F5F1F1;
+            color: $fontCL;
             padding: 0 50px;
         }
     }
