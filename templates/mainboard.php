@@ -1,5 +1,5 @@
 <?php include 'inc/header.php';?>
-    <h1>TEST</h1>
+<?php include 'inc/navbar.php';?>
     <?php displayMessage();?>
 </body>
 </html>
