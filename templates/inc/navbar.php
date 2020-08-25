@@ -7,14 +7,7 @@
             <div class="search-box">
                 <input id="search" type="text" autocomplete="off" placeholder="Search..." />
                     <div class="result">
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
+
                     </div>
                 <label for="search" class="icon"><i class="fas fa-search"></i></label>
             </div>
