@@ -21,4 +21,9 @@
         <?php displayMessage();?>
     </footer>
 </body>
+<script>
+$(document).ready(function() {
+    $('.alert-box').delay(5000).fadeOut(1000); // 5 seconds x 1000 milisec = 5000 milisec
+});
+</script>
 </html>

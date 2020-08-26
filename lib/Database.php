@@ -4,6 +4,7 @@ class Database {
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $dbname = DB_NAME;
+    private $dbnameCMS = DB_NAME_CMS;
 
     private $dbh;
     private $error;
@@ -12,7 +13,7 @@ class Database {
     public function __construct() {
         // Set DSN
         $dsn = 'mysql:host='. $this -> host . ';dbname='. $this -> dbname;
-
+        $dsnCMS = 'mysql:host='. $this -> host . ';dbname='. $this -> dbnameCMS;
         // Set Options
         $options = array (
                 PDO::ATTR_PERSISTENT => true,
@@ -22,13 +23,17 @@ class Database {
         // PDO Instance
         try {
             $this -> dbh = new PDO($dsn, $this -> user, $this -> pass, $options);
+            $this -> dbhCMS = new PDO($dsnCMS, $this -> user, $this -> pass, $options);
         } catch(PDOException $e) {
             $this -> error = $e -> getMessage();
         }
     }
-
     public function query($query) {
         $this -> stmt = $this -> dbh -> prepare($query);
+    }
+
+    public function queryCMS($query) {
+        $this -> stmt = $this -> dbhCMS -> prepare($query);
     }
 
     public function bind($param, $value, $type = null) {
