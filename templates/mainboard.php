@@ -6,7 +6,7 @@
             <div class="grid">
                 <?php foreach($addons as $addon):
                     if($addon -> category === '1'):?>
-                        <div class="grid-item">
+                        <div class="grid-item" onClick="javascript:window.open('http://127.0.0.1/LibraryApp/user_display.php','Windows','width=650,height=850,location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false")">
                             <div class="icon">
                                 <?php echo $addon -> image?>
                             </div>
