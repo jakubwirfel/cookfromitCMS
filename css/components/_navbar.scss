@@ -1,0 +1,159 @@
+.navigation {
+    width: 100%;
+    height: 50px;
+    background: $thiCL;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    .nav-box {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h1 {
+                font-size: 1.6em;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                color: $fontCL;
+            }
+        }
+        .items {
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .search-box {
+                background: transparent;
+                border: 2px solid $secCL;
+                border-radius: 5px;
+                height: 2em;
+                width: 250px;
+                display: flex;
+                position: relative;
+                margin-right: 50px !important;
+                input[type="text"] {
+                    height: 100%;
+                    width: 200px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: 0px 10px;
+                    color: $fontCL;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 15px;
+                    .result{
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+                .icon {
+                    width: 50px;
+                    height: 100%;
+                    background: $secCL;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        font-size: 20px;
+                        color: $fontCL;
+                    }
+                }
+                .result {
+                    position: absolute;
+                    z-index: 999;
+                    top: 30px;
+                    left: 0;
+                    background: $thiCL;
+                    width: 200px;
+                    max-height: 72px;
+                    overflow-y: auto;
+                    p {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid $forCL;
+                        border-top: none;
+                        cursor: pointer;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 15px;
+                        color: $fontCL;
+                        &:hover {
+                            background: $secCL;
+                        }
+                    }
+                }
+            }
+            .user-box {
+                min-width: 300px;
+                height: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .dropdown-holder {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    .img-box {
+                        width: 35px;
+                        height: 35px;
+                        border: 2px solid $secCL;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 15px !important;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                    h2 {
+                        font-size: 1.5em;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 700;
+                        color: $fontCL;
+                    }
+                    i {
+                        font-size: 1.5em;
+                        color: $fontCL;
+                        padding-left: 10px;
+                        padding-top: 5px;
+                    }
+                    &:hover .dropdown-content {
+                        visibility: visible;
+                    }
+                    .dropdown-content {
+                        visibility: hidden;
+                        position: absolute;
+                        background: $thiCL;
+                        min-width: 200px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        top: 35px;
+                        right: 0;
+                        z-index: 1;
+                        p {
+                            margin: 0;
+                            padding: 10px 5px;
+                            border-bottom: 1px solid $forCL;
+                            border-top: none;
+                            cursor: pointer;
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 15px;
+                            color: $fontCL;
+                            &:hover {
+                                background: $secCL;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
